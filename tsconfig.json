@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "sourceMap": true,
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "module": "ESNext",
+    "target": "ES2022",
+    "allowJs": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "lib": ["es6", "dom", "dom.iterable"],
+    "types": ["Phaser", "jest"]
+  },
+  "exclude": [
+    "**/*.test.ts"
+  ]
+}

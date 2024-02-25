@@ -1,0 +1,75 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": ["plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
+  "plugins": ["@typescript-eslint", "import"],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "prettier/prettier": ["error", { "singleQuote": true }],
+    "import/no-duplicates": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "external",
+          "internal",
+          "builtin",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
+        "alphabetize": { "order": "asc", "caseInsensitive": true },
+        "pathGroups": [
+          {
+            "pattern": "**/*.scss",
+            "group": "object",
+            "position": "before"
+          },
+          {
+            "pattern": "**/*.css",
+            "group": "object"
+          },
+          {
+            "pattern": "src/**",
+            "group": "internal",
+            "position": "before"
+          }
+        ],
+        "newlines-between": "always",
+        "pathGroupsExcludedImportTypes": ["type"],
+        "warnOnUnassignedImports": true
+      }
+    ],
+    "@typescript-eslint/consistent-type-imports": "error",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/class-name-casing": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "no-console": 0,
+    "linebreak-style": ["error","unix"],
+    "eqeqeq": 2,
+    "object-curly-spacing": ["error", "always"],
+    "prefer-destructuring": ["error", {
+      "object": true
+    }, {
+      "enforceForRenamedProperties": false
+    }],
+    "no-eval": 2,
+    "no-multi-str": 2,
+    "prefer-const": ["error", {
+      "destructuring": "any",
+      "ignoreReadBeforeAssign": false
+    }],
+    "max-len": ["error", { "code": 120, "ignorePattern": "^import .*" }]
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  }
+}
