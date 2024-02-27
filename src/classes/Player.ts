@@ -1,22 +1,26 @@
 import { Input } from 'phaser';
 
 import { Captain } from 'src/classes/Captain';
+import { KEYS } from 'src/constants';
 
 import type { Scene, Physics } from 'phaser';
 
-const KEYS = ['UP', 'DOWN', 'LEFT', 'RIGHT', 'SPACE'] as const;
+const KEYBOARD_KEYS = ['UP', 'DOWN', 'LEFT', 'RIGHT', 'SPACE'] as const;
 
-type Keys = Record<(typeof KEYS)[number], Input.Keyboard.Key | undefined>;
+type KeyboardKeys = Record<
+  (typeof KEYBOARD_KEYS)[number],
+  Input.Keyboard.Key | undefined
+>;
 
 export class Player extends Captain {
-  private keys = {} as Keys;
+  private keys = {} as KeyboardKeys;
 
   declare body: Physics.Arcade.Body;
 
   constructor(scene: Scene, x: number, y: number) {
-    super(scene, x, y, 'captain');
+    super(scene, x, y, KEYS.image.Captain);
 
-    KEYS.forEach((key) => {
+    KEYBOARD_KEYS.forEach((key) => {
       this.keys[key] = this.scene.input.keyboard?.addKey(
         Input.Keyboard.KeyCodes[key],
       );

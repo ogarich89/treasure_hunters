@@ -1,6 +1,7 @@
 import { Scene } from 'phaser';
 
 import { Player } from 'src/classes/Player';
+import { KEYS } from 'src/constants';
 
 import type { Tilemaps } from 'phaser';
 
@@ -15,13 +16,13 @@ export class Level1 extends Scene {
 
   private initMap() {
     this.map = this.make.tilemap({
-      key: 'terrain',
+      key: KEYS.tilemap.Terrain,
       tileWidth: 32,
       tileHeight: 32,
     });
     this.tileSet = this.map.addTilesetImage(
-      'terrain',
-      'tiles',
+      KEYS.tileset.Terrain,
+      KEYS.image.Tiles,
     ) as Tilemaps.Tileset;
     this.platformLayer = this.map.createLayer(
       'Platform',

@@ -1,5 +1,7 @@
 import { Physics } from 'phaser';
 
+import { KEYS } from 'src/constants';
+
 import type { Scene } from 'phaser';
 
 export class Captain extends Physics.Arcade.Sprite {
@@ -24,23 +26,26 @@ export class Captain extends Physics.Arcade.Sprite {
   private initAnimations() {
     this.scene.anims.create({
       key: 'idle',
-      frames: this.scene.anims.generateFrameNames('a-captain', {
+      frames: this.scene.anims.generateFrameNames(KEYS.atlas.Captain, {
         prefix: 'idle_0',
         end: 5,
+        start: 1,
       }),
     });
     this.scene.anims.create({
       key: 'jump',
-      frames: this.scene.anims.generateFrameNames('a-captain', {
+      frames: this.scene.anims.generateFrameNames(KEYS.atlas.Captain, {
         prefix: 'jump_0',
         end: 3,
+        start: 1,
       }),
     });
     this.scene.anims.create({
       key: 'run',
-      frames: this.scene.anims.generateFrameNames('a-captain', {
+      frames: this.scene.anims.generateFrameNames(KEYS.atlas.Captain, {
         prefix: 'run_0',
-        end: 3,
+        end: 4,
+        start: 1,
       }),
     });
   }
