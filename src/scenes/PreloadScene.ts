@@ -2,35 +2,35 @@ import { Scene } from 'phaser';
 
 import { KEYS } from 'src/constants';
 
-export class Loading extends Scene {
+export class PreloadScene extends Scene {
   constructor() {
-    super('loading-scene');
+    super(KEYS.scene.preload);
   }
   preload(): void {
     this.load.baseURL = '/assets';
 
-    this.load.image(KEYS.image.Captain, '/sprites/captain.png');
+    this.load.image(KEYS.image.captain, '/sprites/captain.png');
     this.load.atlas(
-      KEYS.atlas.Captain,
+      KEYS.atlas.captain,
       '/spritesheets/captain.atlas.png',
       '/spritesheets/captain.atlas.json',
     );
 
     this.load.spritesheet(
-      KEYS.spritesheet.Tiles,
+      KEYS.spritesheet.tiles.terrain,
       '/tilemaps/tiles/terrain.png',
       {
         frameWidth: 32,
         frameHeight: 32,
       },
     );
-    this.load.image(KEYS.image.Tiles, '/tilemaps/tiles/terrain.png');
+    this.load.image(KEYS.image.tiles.terrain, '/tilemaps/tiles/terrain.png');
     this.load.tilemapTiledJSON(
-      KEYS.tilemap.Terrain,
+      KEYS.tilemap.terrain,
       '/tilemaps/json/terrain.json',
     );
   }
   create(): void {
-    this.scene.start('level-1-scene');
+    this.scene.start(KEYS.scene.firstLevel);
   }
 }

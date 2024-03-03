@@ -1,7 +1,7 @@
 import { Game, Scale } from 'phaser';
 
-import { Level1 } from 'src/scenes/Level1';
-import { Loading } from 'src/scenes/Loading';
+import { FirstLevelScene } from 'src/scenes/FirstLevelScene';
+import { PreloadScene } from 'src/scenes/PreloadScene';
 import { resizeHandler } from 'src/utils';
 
 import type { Types } from 'phaser';
@@ -37,7 +37,7 @@ export const config: Types.Core.GameConfig = {
   audio: {
     disableWebAudio: false,
   },
-  scene: [Loading, Level1],
+  scene: [PreloadScene, FirstLevelScene],
 };
 
 window.game = new Game(config);

@@ -5,24 +5,24 @@ import { KEYS } from 'src/constants';
 
 import type { Tilemaps } from 'phaser';
 
-export class Level1 extends Scene {
+export class FirstLevelScene extends Scene {
   private player!: Player;
   private map!: Tilemaps.Tilemap;
   private tileSet!: Tilemaps.Tileset;
   private platformLayer!: Tilemaps.TilemapLayer;
   constructor() {
-    super('level-1-scene');
+    super(KEYS.scene.firstLevel);
   }
 
   private initMap() {
     this.map = this.make.tilemap({
-      key: KEYS.tilemap.Terrain,
+      key: KEYS.tilemap.terrain,
       tileWidth: 32,
       tileHeight: 32,
     });
     this.tileSet = this.map.addTilesetImage(
-      KEYS.tileset.Terrain,
-      KEYS.image.Tiles,
+      KEYS.tileset.terrain,
+      KEYS.image.tiles.terrain,
     ) as Tilemaps.Tileset;
     this.platformLayer = this.map.createLayer(
       'Platform',

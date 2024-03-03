@@ -26,7 +26,7 @@ export class Captain extends Physics.Arcade.Sprite {
   private initAnimations() {
     this.scene.anims.create({
       key: 'idle',
-      frames: this.scene.anims.generateFrameNames(KEYS.atlas.Captain, {
+      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captain, {
         prefix: 'idle_0',
         end: 5,
         start: 1,
@@ -34,7 +34,7 @@ export class Captain extends Physics.Arcade.Sprite {
     });
     this.scene.anims.create({
       key: 'jump',
-      frames: this.scene.anims.generateFrameNames(KEYS.atlas.Captain, {
+      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captain, {
         prefix: 'jump_0',
         end: 3,
         start: 1,
@@ -42,7 +42,7 @@ export class Captain extends Physics.Arcade.Sprite {
     });
     this.scene.anims.create({
       key: 'run',
-      frames: this.scene.anims.generateFrameNames(KEYS.atlas.Captain, {
+      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captain, {
         prefix: 'run_0',
         end: 4,
         start: 1,

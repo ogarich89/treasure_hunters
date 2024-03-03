@@ -1,29 +1,28 @@
 export enum EVENTS_NAME {}
 
-enum Image {
-  Captain = 'image.captain',
-  Tiles = 'image.tiles',
-}
-
-enum Atlas {
-  Captain = 'atlas.captain',
-}
-
-enum Spritesheet {
-  Tiles = 'spritesheet.tiles',
-}
-
-enum Tilemap {
-  Terrain = 'tilemap.terrain',
-}
-enum Tileset {
-  Terrain = 'tileset.terrain',
-}
-
 export const KEYS = {
-  image: Image,
-  atlas: Atlas,
-  spritesheet: Spritesheet,
-  tilemap: Tilemap,
-  tileset: Tileset,
-};
+  image: {
+    captain: 'image.captain',
+    tiles: {
+      terrain: 'image.tiles.terrain',
+    },
+  },
+  atlas: {
+    captain: 'atlas.captain',
+  },
+  spritesheet: {
+    tiles: {
+      terrain: 'spritesheet.tiles.terrain',
+    },
+  },
+  tilemap: {
+    terrain: 'tilemap.terrain',
+  },
+  tileset: {
+    terrain: 'tileset.terrain',
+  },
+  scene: {
+    firstLevel: 'scene.firstLevel',
+    preload: 'scene.preload',
+  },
+} as const;
