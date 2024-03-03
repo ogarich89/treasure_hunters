@@ -9,11 +9,15 @@ export class PreloadScene extends Scene {
   preload(): void {
     this.load.baseURL = '/assets';
 
-    this.load.image(KEYS.image.captain, '/sprites/captain.png');
     this.load.atlas(
       KEYS.atlas.captain,
       '/spritesheets/captain.atlas.png',
       '/spritesheets/captain.atlas.json',
+    );
+    this.load.atlas(
+      KEYS.atlas.captainWithSword,
+      '/spritesheets/captain-with-sword.atlas.png',
+      '/spritesheets/captain-with-sword.atlas.json',
     );
 
     this.load.spritesheet(
@@ -31,6 +35,6 @@ export class PreloadScene extends Scene {
     );
   }
   create(): void {
-    this.scene.start(KEYS.scene.firstLevel);
+    this.scene.start(KEYS.scene.start);
   }
 }

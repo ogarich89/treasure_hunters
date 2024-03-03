@@ -1,17 +1,18 @@
 import { Scene } from 'phaser';
 
-import { Player } from 'src/classes/Player';
 import { KEYS } from 'src/constants';
+import { Player } from 'src/prefabs/Player';
 
 import type { Tilemaps } from 'phaser';
 
-export class FirstLevelScene extends Scene {
+export class GameScene extends Scene {
   private player!: Player;
   private map!: Tilemaps.Tilemap;
   private tileSet!: Tilemaps.Tileset;
   private platformLayer!: Tilemaps.TilemapLayer;
+
   constructor() {
-    super(KEYS.scene.firstLevel);
+    super(KEYS.scene.game);
   }
 
   private initMap() {
@@ -48,6 +49,6 @@ export class FirstLevelScene extends Scene {
   }
 
   update(): void {
-    this.player.update();
+    this.player.move();
   }
 }

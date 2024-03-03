@@ -1,14 +1,15 @@
 import { Game, Scale } from 'phaser';
 
-import { FirstLevelScene } from 'src/scenes/FirstLevelScene';
+import { GameScene } from 'src/scenes/GameScene';
 import { PreloadScene } from 'src/scenes/PreloadScene';
+import { StartScene } from 'src/scenes/StartScene';
 import { resizeHandler } from 'src/utils';
 
 import type { Types } from 'phaser';
 
-export const config: Types.Core.GameConfig = {
+const config: Types.Core.GameConfig = {
   title: 'Treasure Hunters',
-  type: Phaser.WEBGL,
+  type: Phaser.AUTO,
   parent: 'game',
   backgroundColor: '#33323d',
   scale: {
@@ -19,7 +20,7 @@ export const config: Types.Core.GameConfig = {
   physics: {
     default: 'arcade',
     arcade: {
-      debug: false,
+      debug: true,
       gravity: {
         y: 300,
       },
@@ -37,7 +38,7 @@ export const config: Types.Core.GameConfig = {
   audio: {
     disableWebAudio: false,
   },
-  scene: [PreloadScene, FirstLevelScene],
+  scene: [PreloadScene, StartScene, GameScene],
 };
 
 window.game = new Game(config);
