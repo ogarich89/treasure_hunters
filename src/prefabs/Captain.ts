@@ -25,6 +25,7 @@ export class Captain extends Physics.Arcade.Sprite {
   }
 
   private initAnimations() {
+    // WITHOUT SWORD
     this.scene.anims.create({
       key: KEYS.anims.idle,
       frames: this.scene.anims.generateFrameNames(KEYS.atlas.captain, {
@@ -32,7 +33,6 @@ export class Captain extends Physics.Arcade.Sprite {
         start: 1,
         end: 5,
       }),
-      repeat: -1,
     });
     this.scene.anims.create({
       key: KEYS.anims.run,
@@ -50,6 +50,7 @@ export class Captain extends Physics.Arcade.Sprite {
         end: 3,
       }),
     });
+    // WITH SWORD
     this.scene.anims.create({
       key: KEYS.anims.sword.idle,
       frames: this.scene.anims.generateFrameNames(KEYS.atlas.captainWithSword, {
@@ -57,7 +58,6 @@ export class Captain extends Physics.Arcade.Sprite {
         start: 1,
         end: 5,
       }),
-      repeat: -1,
     });
     this.scene.anims.create({
       key: KEYS.anims.sword.run,
@@ -71,6 +71,46 @@ export class Captain extends Physics.Arcade.Sprite {
       key: KEYS.anims.sword.jump,
       frames: this.scene.anims.generateFrameNames(KEYS.atlas.captainWithSword, {
         prefix: 'jump_sword_0',
+        start: 1,
+        end: 3,
+      }),
+    });
+    this.scene.anims.create({
+      key: KEYS.anims.sword.attack1,
+      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captainWithSword, {
+        prefix: 'attack_1_0',
+        start: 1,
+        end: 3,
+      }),
+    });
+    this.scene.anims.create({
+      key: KEYS.anims.sword.attack2,
+      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captainWithSword, {
+        prefix: 'attack_2_0',
+        start: 1,
+        end: 3,
+      }),
+    });
+    this.scene.anims.create({
+      key: KEYS.anims.sword.attack3,
+      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captainWithSword, {
+        prefix: 'attack_3_0',
+        start: 1,
+        end: 3,
+      }),
+    });
+    this.scene.anims.create({
+      key: KEYS.anims.sword.airAttack1,
+      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captainWithSword, {
+        prefix: 'air_attack_1_0',
+        start: 1,
+        end: 3,
+      }),
+    });
+    this.scene.anims.create({
+      key: KEYS.anims.sword.airAttack2,
+      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captainWithSword, {
+        prefix: 'air_attack_2_0',
         start: 1,
         end: 3,
       }),

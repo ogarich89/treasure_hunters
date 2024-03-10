@@ -1,3 +1,5 @@
+import { Math } from 'phaser';
+
 import { KEYS } from 'src/constants';
 import { Captain } from 'src/prefabs/Captain';
 
@@ -12,29 +14,46 @@ export class Player extends Captain {
     this.cursor =
       scene.input.keyboard?.createCursorKeys() as Types.Input.Keyboard.CursorKeys;
 
-    this.cursor.space.on('down', () => {
-      this.body.setVelocityY(-150);
-      this.anims.play(KEYS.anims.sword.jump, true);
+    this.cursor.shift.on('down', () => {
+      if (this.body.blocked.down) {
+        const type = Math.Between(1, 3) as 1 | 2 | 3;
+        this.anims.play(KEYS.anims.sword[`attack${type}`], true);
+      } else {
+        const type = Math.Between(1, 2) as 1 | 2;
+        this.anims.play(KEYS.anims.sword[`airAttack${type}`], true);
+      }
+
+      this.body.setVelocityX(0);
     });
   }
 
   move() {
-    if (this.body.position.y === 256) {
-      if (!this.anims.isPlaying) {
-        this.anims.play(KEYS.anims.sword.idle);
-      }
-      this.body.setVelocityX(0);
-    }
-
     if (this.cursor.left.isDown) {
       this.body.setVelocityX(-100);
       this.flipX = true;
-      this.anims.play(KEYS.anims.sword.run, true);
-    }
-    if (this.cursor.right.isDown) {
+      if (this.body.blocked.down) {
+        if (!this.anims.isPlaying) {
+          this.anims.play(KEYS.anims.sword.run);
+        }
+      }
+    } else if (this.cursor.right.isDown) {
       this.body.setVelocityX(100);
       this.flipX = false;
-      this.anims.play(KEYS.anims.sword.run, true);
+      if (this.body.blocked.down) {
+        if (!this.anims.isPlaying) {
+          this.anims.play(KEYS.anims.sword.run);
+        }
+      }
+    } else if (this.body.blocked.down) {
+      this.body.setVelocityX(0);
+      if (!this.anims.isPlaying) {
+        this.anims.play(KEYS.anims.sword.idle);
+      }
+    }
+
+    if (this.cursor.space.isDown && this.body.blocked.down) {
+      this.body.setVelocityY(-150);
+      this.anims.play(KEYS.anims.sword.jump, true);
     }
   }
 }

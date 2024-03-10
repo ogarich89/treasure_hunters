@@ -42,7 +42,6 @@ export class GameScene extends Scene {
 
   create() {
     this.initMap();
-
     this.player = new Player(this, 100, 278);
     this.physics.add.collider(this.player, this.platformLayer);
     this.initCamera();

@@ -34,6 +34,11 @@ export const KEYS = {
       run: 'anims.sword_run',
       jump: 'anims.sword_jump',
       idle: 'anims.sword_idle',
+      attack1: 'anims.sword_attack_1',
+      attack2: 'anims.sword_attack_2',
+      attack3: 'anims.sword_attack_3',
+      airAttack1: 'anims.sword_air_attack_1',
+      airAttack2: 'anims.sword_air_attack_2',
     },
   },
 } as const;
