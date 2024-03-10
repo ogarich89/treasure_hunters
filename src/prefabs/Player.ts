@@ -1,11 +1,11 @@
 import { Math } from 'phaser';
 
 import { KEYS } from 'src/constants';
-import { Captain } from 'src/prefabs/Captain';
+import { CaptainClownNose } from 'src/prefabs/CaptainClownNose';
 
 import type { Scene, Physics, Types } from 'phaser';
 
-export class Player extends Captain {
+export class Player extends CaptainClownNose {
   private cursor: Types.Input.Keyboard.CursorKeys;
   declare body: Physics.Arcade.Body;
 

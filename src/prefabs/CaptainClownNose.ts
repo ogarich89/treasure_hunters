@@ -4,7 +4,7 @@ import { KEYS } from 'src/constants';
 
 import type { Scene } from 'phaser';
 
-export class Captain extends Physics.Arcade.Sprite {
+export class CaptainClownNose extends Physics.Arcade.Sprite {
   declare body: Physics.Arcade.Body;
 
   constructor(
