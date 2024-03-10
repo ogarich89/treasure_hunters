@@ -32,7 +32,10 @@ export class Player extends Captain {
       this.body.setVelocityX(-100);
       this.flipX = true;
       if (this.body.blocked.down) {
-        if (!this.anims.isPlaying) {
+        if (
+          this.anims.currentAnim?.key === KEYS.anims.sword.idle ||
+          !this.anims.isPlaying
+        ) {
           this.anims.play(KEYS.anims.sword.run);
         }
       }
@@ -40,7 +43,10 @@ export class Player extends Captain {
       this.body.setVelocityX(100);
       this.flipX = false;
       if (this.body.blocked.down) {
-        if (!this.anims.isPlaying) {
+        if (
+          this.anims.currentAnim?.key === KEYS.anims.sword.idle ||
+          !this.anims.isPlaying
+        ) {
           this.anims.play(KEYS.anims.sword.run);
         }
       }
