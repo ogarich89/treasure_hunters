@@ -10,14 +10,19 @@ export class PreloadScene extends Scene {
     this.load.baseURL = '/assets';
 
     this.load.atlas(
-      KEYS.atlas.captain,
-      '/spritesheets/captain.atlas.png',
-      '/spritesheets/captain.atlas.json',
+      KEYS.atlas.captainClownNose,
+      '/spritesheets/captain_clown_nose.atlas.png',
+      '/spritesheets/captain_clown_nose.atlas.json',
     );
     this.load.atlas(
-      KEYS.atlas.captainWithSword,
-      '/spritesheets/captain-with-sword.atlas.png',
-      '/spritesheets/captain-with-sword.atlas.json',
+      KEYS.atlas.captainClownNoseWithSword,
+      '/spritesheets/captain_clown_nose_with_sword.atlas.png',
+      '/spritesheets/captain_clown_nose_with_sword.atlas.json',
+    );
+    this.load.atlas(
+      KEYS.atlas.fierceTooth,
+      '/spritesheets/fierce_tooth.atlas.png',
+      '/spritesheets/fierce_tooth.atlas.json',
     );
 
     this.load.spritesheet(

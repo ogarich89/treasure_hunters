@@ -27,24 +27,24 @@ export class Captain extends Physics.Arcade.Sprite {
   private initAnimations() {
     // WITHOUT SWORD
     this.scene.anims.create({
-      key: KEYS.anims.idle,
-      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captain, {
+      key: KEYS.anims.captainClownNose.idle,
+      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captainClownNose, {
         prefix: 'idle_0',
         start: 1,
         end: 5,
       }),
     });
     this.scene.anims.create({
-      key: KEYS.anims.run,
-      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captain, {
+      key: KEYS.anims.captainClownNose.run,
+      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captainClownNose, {
         prefix: 'run_0',
         start: 1,
         end: 4,
       }),
     });
     this.scene.anims.create({
-      key: KEYS.anims.jump,
-      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captain, {
+      key: KEYS.anims.captainClownNose.jump,
+      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captainClownNose, {
         prefix: 'jump_0',
         start: 1,
         end: 3,
@@ -52,68 +52,92 @@ export class Captain extends Physics.Arcade.Sprite {
     });
     // WITH SWORD
     this.scene.anims.create({
-      key: KEYS.anims.sword.idle,
-      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captainWithSword, {
-        prefix: 'idle_sword_0',
-        start: 1,
-        end: 5,
-      }),
+      key: KEYS.anims.captainClownNose.withSword.idle,
+      frames: this.scene.anims.generateFrameNames(
+        KEYS.atlas.captainClownNoseWithSword,
+        {
+          prefix: 'idle_sword_0',
+          start: 1,
+          end: 5,
+        },
+      ),
     });
     this.scene.anims.create({
-      key: KEYS.anims.sword.run,
-      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captainWithSword, {
-        prefix: 'run_sword_0',
-        start: 1,
-        end: 6,
-      }),
+      key: KEYS.anims.captainClownNose.withSword.run,
+      frames: this.scene.anims.generateFrameNames(
+        KEYS.atlas.captainClownNoseWithSword,
+        {
+          prefix: 'run_sword_0',
+          start: 1,
+          end: 6,
+        },
+      ),
     });
     this.scene.anims.create({
-      key: KEYS.anims.sword.jump,
-      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captainWithSword, {
-        prefix: 'jump_sword_0',
-        start: 1,
-        end: 3,
-      }),
+      key: KEYS.anims.captainClownNose.withSword.jump,
+      frames: this.scene.anims.generateFrameNames(
+        KEYS.atlas.captainClownNoseWithSword,
+        {
+          prefix: 'jump_sword_0',
+          start: 1,
+          end: 3,
+        },
+      ),
     });
     this.scene.anims.create({
-      key: KEYS.anims.sword.attack1,
-      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captainWithSword, {
-        prefix: 'attack_1_0',
-        start: 1,
-        end: 3,
-      }),
+      key: KEYS.anims.captainClownNose.withSword.attack1,
+      frames: this.scene.anims.generateFrameNames(
+        KEYS.atlas.captainClownNoseWithSword,
+        {
+          prefix: 'attack_1_0',
+          start: 1,
+          end: 3,
+        },
+      ),
     });
     this.scene.anims.create({
-      key: KEYS.anims.sword.attack2,
-      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captainWithSword, {
-        prefix: 'attack_2_0',
-        start: 1,
-        end: 3,
-      }),
+      key: KEYS.anims.captainClownNose.withSword.attack2,
+      frames: this.scene.anims.generateFrameNames(
+        KEYS.atlas.captainClownNoseWithSword,
+        {
+          prefix: 'attack_2_0',
+          start: 1,
+          end: 3,
+        },
+      ),
     });
     this.scene.anims.create({
-      key: KEYS.anims.sword.attack3,
-      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captainWithSword, {
-        prefix: 'attack_3_0',
-        start: 1,
-        end: 3,
-      }),
+      key: KEYS.anims.captainClownNose.withSword.attack3,
+      frames: this.scene.anims.generateFrameNames(
+        KEYS.atlas.captainClownNoseWithSword,
+        {
+          prefix: 'attack_3_0',
+          start: 1,
+          end: 3,
+        },
+      ),
     });
     this.scene.anims.create({
-      key: KEYS.anims.sword.airAttack1,
-      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captainWithSword, {
-        prefix: 'air_attack_1_0',
-        start: 1,
-        end: 3,
-      }),
+      key: KEYS.anims.captainClownNose.withSword.airAttack1,
+      frames: this.scene.anims.generateFrameNames(
+        KEYS.atlas.captainClownNoseWithSword,
+        {
+          prefix: 'air_attack_1_0',
+          start: 1,
+          end: 3,
+        },
+      ),
     });
     this.scene.anims.create({
-      key: KEYS.anims.sword.airAttack2,
-      frames: this.scene.anims.generateFrameNames(KEYS.atlas.captainWithSword, {
-        prefix: 'air_attack_2_0',
-        start: 1,
-        end: 3,
-      }),
+      key: KEYS.anims.captainClownNose.withSword.airAttack2,
+      frames: this.scene.anims.generateFrameNames(
+        KEYS.atlas.captainClownNoseWithSword,
+        {
+          prefix: 'air_attack_2_0',
+          start: 1,
+          end: 3,
+        },
+      ),
     });
   }
 }

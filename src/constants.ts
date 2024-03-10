@@ -7,8 +7,9 @@ export const KEYS = {
     },
   },
   atlas: {
-    captain: 'atlas.captain',
-    captainWithSword: 'atlas.captain_with_sword',
+    captainClownNose: 'atlas.captain_clown_nose',
+    captainClownNoseWithSword: 'atlas.captain_clown_nose_with_sword',
+    fierceTooth: 'atlas.fierce_tooth',
   },
   spritesheet: {
     tiles: {
@@ -27,18 +28,20 @@ export const KEYS = {
     game: 'scene.game',
   },
   anims: {
-    run: 'anims.run',
-    jump: 'anims.jump',
-    idle: 'anims.idle',
-    sword: {
-      run: 'anims.sword_run',
-      jump: 'anims.sword_jump',
-      idle: 'anims.sword_idle',
-      attack1: 'anims.sword_attack_1',
-      attack2: 'anims.sword_attack_2',
-      attack3: 'anims.sword_attack_3',
-      airAttack1: 'anims.sword_air_attack_1',
-      airAttack2: 'anims.sword_air_attack_2',
+    captainClownNose: {
+      run: 'anims.captain_clown_nose.run',
+      jump: 'anims.captain_clown_nose.jump',
+      idle: 'anims.captain_clown_nose.idle',
+      withSword: {
+        run: 'anims.captain_clown_nose.with_sword.run',
+        jump: 'anims.captain_clown_nose.with_sword.jump',
+        idle: 'anims.captain_clown_nose.with_sword.idle',
+        attack1: 'anims.captain_clown_nose.with_sword.attack_1',
+        attack2: 'anims.captain_clown_nose.with_sword.attack_2',
+        attack3: 'anims.captain_clown_nose.with_sword.attack_3',
+        airAttack1: 'anims.captain_clown_nose.with_sword.air_attack_1',
+        airAttack2: 'anims.captain_clown_nose.with_sword.air_attack_2',
+      },
     },
   },
 } as const;
