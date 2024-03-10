@@ -43,5 +43,10 @@ export const KEYS = {
         airAttack2: 'anims.captain_clown_nose.with_sword.air_attack_2',
       },
     },
+    fierceTooth: {
+      idle: 'anims.fierce_tooth.idle',
+      run: 'anims.fierce_tooth.run',
+      jump: 'anims.fierce_tooth.jump',
+    },
   },
 } as const;

@@ -1,12 +1,14 @@
 import { Scene } from 'phaser';
 
 import { KEYS } from 'src/constants';
+import { FierceTooth } from 'src/prefabs/FierceTooth';
 import { Player } from 'src/prefabs/Player';
 
 import type { Tilemaps } from 'phaser';
 
 export class GameScene extends Scene {
   private player!: Player;
+  private fierceTooth!: FierceTooth;
   private map!: Tilemaps.Tilemap;
   private tileSet!: Tilemaps.Tileset;
   private platformLayer!: Tilemaps.TilemapLayer;
@@ -43,11 +45,14 @@ export class GameScene extends Scene {
   create() {
     this.initMap();
     this.player = new Player(this, 100, 278);
+    this.fierceTooth = new FierceTooth(this, 400, 278);
     this.physics.add.collider(this.player, this.platformLayer);
+    this.physics.add.collider(this.fierceTooth, this.platformLayer);
     this.initCamera();
   }
 
   update(): void {
     this.player.move();
+    this.fierceTooth.move();
   }
 }

@@ -18,8 +18,8 @@ export class CaptainClownNose extends Physics.Arcade.Sprite {
     scene.add.existing(this);
     scene.physics.add.existing(this);
     this.body.setCollideWorldBounds(true);
-    this.body.setSize(32, 32);
-    this.body.setOffset(16, 0);
+    this.body.setSize(28, 28);
+    this.body.setOffset(18, 3);
 
     this.initAnimations();
   }
