@@ -1,0 +1,177 @@
+{
+    "frames": [
+        {
+            "filename": "attack_3_03",
+            "frame": {
+                "w": 42,
+                "h": 36,
+                "x": 0,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "attack_3_01",
+            "frame": {
+                "w": 42,
+                "h": 36,
+                "x": 0,
+                "y": 36
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "attack_3_02",
+            "frame": {
+                "w": 42,
+                "h": 36,
+                "x": 42,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "attack_2_02",
+            "frame": {
+                "w": 38,
+                "h": 37,
+                "x": 0,
+                "y": 72
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "attack_2_01",
+            "frame": {
+                "w": 38,
+                "h": 37,
+                "x": 38,
+                "y": 72
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "attack_2_03",
+            "frame": {
+                "w": 38,
+                "h": 37,
+                "x": 84,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "air_attack_2_01",
+            "frame": {
+                "w": 31,
+                "h": 23,
+                "x": 42,
+                "y": 36
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "air_attack_2_02",
+            "frame": {
+                "w": 31,
+                "h": 23,
+                "x": 73,
+                "y": 37
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "attack_1_01",
+            "frame": {
+                "w": 28,
+                "h": 17,
+                "x": 76,
+                "y": 60
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "attack_1_02",
+            "frame": {
+                "w": 28,
+                "h": 17,
+                "x": 76,
+                "y": 77
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "attack_1_03",
+            "frame": {
+                "w": 28,
+                "h": 17,
+                "x": 0,
+                "y": 109
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "air_attack_1_01",
+            "frame": {
+                "w": 22,
+                "h": 26,
+                "x": 76,
+                "y": 94
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "air_attack_1_02",
+            "frame": {
+                "w": 22,
+                "h": 26,
+                "x": 98,
+                "y": 94
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        }
+    ],
+    "meta": {
+        "description": "Atlas generado con Atlas Packer Gamma V2",
+        "web": "https://gammafp.github.io/atlas-packer-phaser/"
+    }
+}

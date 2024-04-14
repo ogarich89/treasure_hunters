@@ -46,11 +46,23 @@ export class GameScene extends Scene {
     this.initMap();
     this.player = new Player(this, 100, 278);
     this.fierceTooth = new FierceTooth(this, 400, 278);
+
     this.physics.add.collider(this.player, this.platformLayer);
     this.physics.add.collider(this.fierceTooth, this.platformLayer);
+    this.physics.add.collider(
+      this.player,
+      this.fierceTooth,
+      this.handleCollide,
+      undefined,
+      this,
+    );
+
     this.initCamera();
   }
 
+  handleCollide(source: any, target: any) {
+    console.log(source, target);
+  }
   update(): void {
     this.player.move();
     this.fierceTooth.move();

@@ -24,6 +24,11 @@ export class PreloadScene extends Scene {
       '/spritesheets/fierce_tooth.atlas.png',
       '/spritesheets/fierce_tooth.atlas.json',
     );
+    this.load.atlas(
+      KEYS.atlas.swordAttacks,
+      '/spritesheets/sword_effects.atlas.png',
+      '/spritesheets/sword_effects.atlas.json',
+    );
 
     this.load.spritesheet(
       KEYS.spritesheet.tiles.terrain,

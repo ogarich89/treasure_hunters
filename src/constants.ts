@@ -10,6 +10,7 @@ export const KEYS = {
     captainClownNose: 'atlas.captain_clown_nose',
     captainClownNoseWithSword: 'atlas.captain_clown_nose_with_sword',
     fierceTooth: 'atlas.fierce_tooth',
+    swordAttacks: 'atlas.sword_attacks',
   },
   spritesheet: {
     tiles: {
@@ -42,6 +43,13 @@ export const KEYS = {
         airAttack1: 'anims.captain_clown_nose.with_sword.air_attack_1',
         airAttack2: 'anims.captain_clown_nose.with_sword.air_attack_2',
       },
+    },
+    sword: {
+      attack1: 'anims.sword.attack_1',
+      attack2: 'anims.sword.attack_2',
+      attack3: 'anims.sword.attack_3',
+      airAttack1: 'anims.sword.air_attack_1',
+      airAttack2: 'anims.sword.air_attack_2',
     },
     fierceTooth: {
       idle: 'anims.fierce_tooth.idle',
