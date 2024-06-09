@@ -8,8 +8,38 @@ const {
   Arcade: { Sprite },
 } = Physics;
 
-const SETTINGS: Record<
-  keyof typeof KEYS.anims.sword,
+type Key = keyof typeof KEYS.anims.sword;
+
+const SETTINGS = {
+  attack1: {
+    size: [20, 10],
+    positionOffset: [33, 4],
+    offset: [-8, 5],
+    flip: {
+      positionOffset: [-33, 4],
+      offset: [20, 5],
+    },
+  },
+  attack2: {
+    size: [16, 28],
+    positionOffset: [30, 0],
+    offset: [1, 10],
+    flip: {
+      positionOffset: [-30, 0],
+      offset: [21, 10],
+    },
+  },
+  attack3: {
+    size: [16, 28],
+    positionOffset: [30, -3],
+    offset: [3, 3],
+    flip: {
+      positionOffset: [-30, -3],
+      offset: [23, 3],
+    },
+  },
+} as Record<
+  Key,
   {
     size: [number, number];
     offset: [number, number];
@@ -19,17 +49,7 @@ const SETTINGS: Record<
       offset: [number, number];
     };
   }
-> = {
-  attack1: {
-    size: [20, 10],
-    positionOffset: [35, 0],
-    offset: [-10, 8],
-    flip: {
-      positionOffset: [-37, 0],
-      offset: [20, 8],
-    },
-  },
-};
+>;
 
 export class Sword extends Sprite {
   declare body: Physics.Arcade.Body;

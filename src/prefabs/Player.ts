@@ -22,6 +22,13 @@ export class Player extends CaptainClownNose {
   }
 
   move() {
+    if (
+      this.anims.isPlaying &&
+      this.anims.currentAnim?.key.includes('attack') &&
+      this.body.blocked.down
+    ) {
+      return;
+    }
     if (this.cursor.left.isDown) {
       this.body.setVelocityX(-100);
       this.flipX = true;
@@ -62,7 +69,7 @@ export class Player extends CaptainClownNose {
   attack = () => {
     if (this.body.blocked.down) {
       const type = Math.Between(1, 3) as 1 | 2 | 3;
-      const key = `attack${1}` as const;
+      const key = `attack${type}` as const;
       this.anims.play(KEYS.anims.captainClownNose.withSword[key], true);
       this.sword.activate(key, {
         flipX: this.flipX,
