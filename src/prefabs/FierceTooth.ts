@@ -27,6 +27,7 @@ export class FierceTooth extends Physics.Arcade.Sprite {
         start: 1,
         end: 8,
       }),
+      frameRate: 10,
     });
     this.scene.anims.create({
       key: KEYS.anims.fierceTooth.run,
@@ -35,6 +36,7 @@ export class FierceTooth extends Physics.Arcade.Sprite {
         start: 1,
         end: 6,
       }),
+      frameRate: 10,
     });
     this.scene.anims.create({
       key: KEYS.anims.fierceTooth.jump,
@@ -43,6 +45,7 @@ export class FierceTooth extends Physics.Arcade.Sprite {
         start: 1,
         end: 3,
       }),
+      frameRate: 10,
     });
   }
 

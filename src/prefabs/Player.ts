@@ -3,34 +3,22 @@ import { Math } from 'phaser';
 import { KEYS } from 'src/constants';
 import { CaptainClownNose } from 'src/prefabs/CaptainClownNose';
 
+import { Sword } from './Sword';
+
 import type { Scene, Physics, Types } from 'phaser';
 
 export class Player extends CaptainClownNose {
   private cursor: Types.Input.Keyboard.CursorKeys;
+  private sword: Sword;
   declare body: Physics.Arcade.Body;
 
   constructor(scene: Scene, x: number, y: number) {
     super(scene, x, y, KEYS.atlas.captainClownNose, 'idle_01');
+    this.sword = new Sword(scene, x, y);
     this.cursor =
       scene.input.keyboard?.createCursorKeys() as Types.Input.Keyboard.CursorKeys;
 
-    this.cursor.shift.on('down', () => {
-      if (this.body.blocked.down) {
-        const type = Math.Between(1, 3) as 1 | 2 | 3;
-        this.anims.play(
-          KEYS.anims.captainClownNose.withSword[`attack${type}`],
-          true,
-        );
-      } else {
-        const type = Math.Between(1, 2) as 1 | 2;
-        this.anims.play(
-          KEYS.anims.captainClownNose.withSword[`airAttack${type}`],
-          true,
-        );
-      }
-
-      this.body.setVelocityX(0);
-    });
+    this.cursor.shift.on('down', this.attack);
   }
 
   move() {
@@ -70,4 +58,25 @@ export class Player extends CaptainClownNose {
       this.anims.play(KEYS.anims.captainClownNose.withSword.jump, true);
     }
   }
+
+  attack = () => {
+    if (this.body.blocked.down) {
+      const type = Math.Between(1, 3) as 1 | 2 | 3;
+      const key = `attack${1}` as const;
+      this.anims.play(KEYS.anims.captainClownNose.withSword[key], true);
+      this.sword.activate(key, {
+        flipX: this.flipX,
+        position: {
+          x: this.x,
+          y: this.y,
+        },
+      });
+    } else {
+      const type = Math.Between(1, 2) as 1 | 2;
+      const key = `airAttack${type}` as const;
+      this.anims.play(KEYS.anims.captainClownNose.withSword[key], true);
+    }
+
+    this.body.setVelocityX(0);
+  };
 }

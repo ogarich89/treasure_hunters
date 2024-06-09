@@ -49,13 +49,6 @@ export class GameScene extends Scene {
 
     this.physics.add.collider(this.player, this.platformLayer);
     this.physics.add.collider(this.fierceTooth, this.platformLayer);
-    this.physics.add.collider(
-      this.player,
-      this.fierceTooth,
-      this.handleCollide,
-      undefined,
-      this,
-    );
 
     this.initCamera();
   }

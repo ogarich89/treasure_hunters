@@ -4,7 +4,11 @@ import { KEYS } from 'src/constants';
 
 import type { Scene } from 'phaser';
 
-export class CaptainClownNose extends Physics.Arcade.Sprite {
+const {
+  Arcade: { Sprite },
+} = Physics;
+
+export class CaptainClownNose extends Sprite {
   declare body: Physics.Arcade.Body;
 
   constructor(
@@ -33,6 +37,7 @@ export class CaptainClownNose extends Physics.Arcade.Sprite {
         start: 1,
         end: 5,
       }),
+      frameRate: 10,
     });
     this.scene.anims.create({
       key: KEYS.anims.captainClownNose.run,
@@ -41,6 +46,7 @@ export class CaptainClownNose extends Physics.Arcade.Sprite {
         start: 1,
         end: 4,
       }),
+      frameRate: 10,
     });
     this.scene.anims.create({
       key: KEYS.anims.captainClownNose.jump,
@@ -49,6 +55,7 @@ export class CaptainClownNose extends Physics.Arcade.Sprite {
         start: 1,
         end: 3,
       }),
+      frameRate: 10,
     });
     // WITH SWORD
     this.scene.anims.create({
@@ -61,6 +68,7 @@ export class CaptainClownNose extends Physics.Arcade.Sprite {
           end: 5,
         },
       ),
+      frameRate: 10,
     });
     this.scene.anims.create({
       key: KEYS.anims.captainClownNose.withSword.run,
@@ -72,6 +80,7 @@ export class CaptainClownNose extends Physics.Arcade.Sprite {
           end: 6,
         },
       ),
+      frameRate: 10,
     });
     this.scene.anims.create({
       key: KEYS.anims.captainClownNose.withSword.jump,
@@ -83,6 +92,7 @@ export class CaptainClownNose extends Physics.Arcade.Sprite {
           end: 3,
         },
       ),
+      frameRate: 10,
     });
     this.scene.anims.create({
       key: KEYS.anims.captainClownNose.withSword.attack1,
@@ -94,6 +104,7 @@ export class CaptainClownNose extends Physics.Arcade.Sprite {
           end: 3,
         },
       ),
+      frameRate: 10,
     });
     this.scene.anims.create({
       key: KEYS.anims.captainClownNose.withSword.attack2,
@@ -105,6 +116,7 @@ export class CaptainClownNose extends Physics.Arcade.Sprite {
           end: 3,
         },
       ),
+      frameRate: 10,
     });
     this.scene.anims.create({
       key: KEYS.anims.captainClownNose.withSword.attack3,
@@ -116,6 +128,7 @@ export class CaptainClownNose extends Physics.Arcade.Sprite {
           end: 3,
         },
       ),
+      frameRate: 10,
     });
     this.scene.anims.create({
       key: KEYS.anims.captainClownNose.withSword.airAttack1,
@@ -127,6 +140,7 @@ export class CaptainClownNose extends Physics.Arcade.Sprite {
           end: 3,
         },
       ),
+      frameRate: 10,
     });
     this.scene.anims.create({
       key: KEYS.anims.captainClownNose.withSword.airAttack2,
@@ -138,6 +152,7 @@ export class CaptainClownNose extends Physics.Arcade.Sprite {
           end: 3,
         },
       ),
+      frameRate: 10,
     });
   }
 }

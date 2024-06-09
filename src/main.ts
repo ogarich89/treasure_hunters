@@ -1,4 +1,4 @@
-import { Game, Scale } from 'phaser';
+import { Game, Scale, AUTO } from 'phaser';
 
 import { GameScene } from 'src/scenes/GameScene';
 import { PreloadScene } from 'src/scenes/PreloadScene';
@@ -9,7 +9,7 @@ import type { Types } from 'phaser';
 
 const config: Types.Core.GameConfig = {
   title: 'Treasure Hunters',
-  type: Phaser.AUTO,
+  type: AUTO,
   parent: 'game',
   backgroundColor: '#33323d',
   scale: {
@@ -17,11 +17,15 @@ const config: Types.Core.GameConfig = {
     width: window.innerWidth,
     height: window.innerHeight,
   },
+  fps: {
+    target: 10,
+  },
   physics: {
     default: 'arcade',
     arcade: {
       debug: true,
       gravity: {
+        x: 0,
         y: 300,
       },
     },
@@ -38,7 +42,7 @@ const config: Types.Core.GameConfig = {
   audio: {
     disableWebAudio: false,
   },
-  scene: [PreloadScene, StartScene, GameScene],
+  scene: [PreloadScene, GameScene],
 };
 
 window.game = new Game(config);

@@ -26,8 +26,8 @@ export class PreloadScene extends Scene {
     );
     this.load.atlas(
       KEYS.atlas.swordAttacks,
-      '/spritesheets/sword_effects.atlas.png',
-      '/spritesheets/sword_effects.atlas.json',
+      '/spritesheets/sword_attacks.atlas.png',
+      '/spritesheets/sword_attacks.atlas.json',
     );
 
     this.load.spritesheet(
@@ -45,6 +45,6 @@ export class PreloadScene extends Scene {
     );
   }
   create(): void {
-    this.scene.start(KEYS.scene.start);
+    this.scene.start(KEYS.scene.game);
   }
 }
